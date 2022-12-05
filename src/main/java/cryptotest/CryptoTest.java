@@ -70,5 +70,11 @@ public static Scanner input = new Scanner(System.in);
                 VigenereCipher txt = new VigenereCipher(message,Key);
                 System.out.println(txt.Decrypt());
         }
+        else if (methodchoice == 5 && cryptochoice == 1){
+                System.out.println("Enter the key:");
+                String Key = input.next();
+                VernamCipher txt = new VernamCipher(message,Key);
+                System.out.println(txt.Encrypt());
+        }
     }
 }
