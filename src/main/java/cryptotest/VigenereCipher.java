@@ -30,7 +30,6 @@ public class VigenereCipher {
             conv = (int) (plainText.charAt(i) - 'A') - (int) (Key.charAt(keyptr) - 'A');
             conv = ((conv % 26 ) + 26) % 26;
             res += (char) ('A' + conv);
-            System.out.println(conv);
             keyptr = (keyptr + 1 ) % (Key.length());
         }
         return res;

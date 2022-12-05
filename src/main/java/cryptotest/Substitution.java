@@ -30,10 +30,11 @@ public class Substitution {
                    conv = plainText.charAt(i) - 'A';
                    res += cipherLettersCapital.charAt(conv);
                }
-            if (isLower(plainText.charAt(i))){
+            else if (isLower(plainText.charAt(i))){
                    conv = plainText.charAt(i) - 'a';
                    res += cipherLettersSmall.charAt(conv);
                }
+            else if (plainText.charAt(i)== ' '){res += ' ';}
         }
         return res;
     }
@@ -53,10 +54,11 @@ public class Substitution {
                    idx = capitalMap.get(plainText.charAt(i));
                    res += (char)(idx + 'A');
                }
-            if (isLower(plainText.charAt(i))){
+            else if (isLower(plainText.charAt(i))){
                    idx = smallMap.get(plainText.charAt(i));
                    res += (char)(idx + 'a');
                }
+            else if (plainText.charAt(i)== ' '){res += ' ';}
         }
         return res;
     }
