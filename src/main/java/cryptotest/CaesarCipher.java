@@ -42,14 +42,14 @@ public class CaesarCipher {
         int conv;
         for(int i=0;i< plainText.length();i++){
                if (isUpper(plainText.charAt(i))){
-                   conv = plainText.charAt(i) + 'A';
-                   conv = ((conv - key) %26 + key) % 26;
+                   conv = plainText.charAt(i) - 'A';
+                   conv = ((conv - key) % 26 + 26) % 26;
                    char ch = (char) (conv + 'A');
                    res += ch;
                }
                else if (isLower(plainText.charAt(i))){
-                   conv = plainText.charAt(i) + 'a';
-                   conv = ((conv - key) %26 + key) % 26;
+                   conv = plainText.charAt(i) - 'a';
+                   conv = ((conv - key) %26 + 26) % 26;
                    char ch = (char) (conv + 'a');
                    res += ch;
                } 
