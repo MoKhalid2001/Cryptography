@@ -98,7 +98,7 @@ public class VernamCipher {
         }
         return true;
     }
-    public String Encrypt(){
+    public String EncryptOrDecrypt(){
         String res = "";
         if (!(isG1() && isG2() && isG3())){
         System.out.println("ERROR");

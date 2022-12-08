@@ -74,7 +74,7 @@ public static Scanner input = new Scanner(System.in);
                 System.out.println("Enter the key:");
                 String Key = input.next();
                 VernamCipher txt = new VernamCipher(message,Key);
-                System.out.println(txt.Encrypt());
+                System.out.println(txt.EncryptOrDecrypt());
         }
     }
 }
